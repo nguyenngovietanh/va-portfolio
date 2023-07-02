@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=divice-width, intinial-scale=1.0">
+        <title>Viet Anh Portfolio</title>
+        <link rel="stylesheet" href="./assets/tailwind.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/style.css">
+        <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://kit.fontawesome.com/e8079f8f5d.js" crossorigin="anonymous"></script>
+        <script src="/assets/all.min.js"></script>
+    </head>
+    <body class="w-full h-auto scroll-smooth text-base bg-fixed	bg-center bg-cover cursor-default">
+        <div class="main-container text-left m-auto relative overflow-hidden">
+            <!-- header -->
+            <div class="header w-full flex items-center	flex-col">
+                <div class="navbar fixed w-full flex justify-center h-20" id="navbar">
+                    <div class="navbar-items relative flex items-center justify-between w-full px-0">
+                        <div class="logo" id="logo">
+                            <img src="./assets/images/new-logo-V-white.png" alt="" class="relative w-12 h-12 cursor-pointer">
+                        </div>
+                        <div class="navigation-block">
+                            <div class="navigation relative" id="navigation">
+                                <a href="#portfolio">Portfolio</a>
+                                <a href="#resume">Resume</a>
+                                <a href="#" onclick="blog()">Blog</a>
+                                <a href="#contact">Contact</a>
+                            </div>
+                            <div class="toggle" id="toggle">
+                                <button class="toggle-icon relative w-full h-full flex flex-col items-end justify-around cursor-pointer border-none" id="toggle-icon">
+                                    <div class="toggle-line w-3/4 right-0 rounded-xl bg-white" id="toggle-line"></div>
+                                </button>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="header-content w-full relative text-white pt-32">
+                    <div class="typing-effect inline-block whitespace-nowrap pt-2.5 w-full h-full mt-2.5 mb-0 mx-0">
+                        <h1>Hi there<span>!</span></h1>
+                        <h1>I<span>'</span>m Viet Anh<span>.</span></h1>
+                    </div>
+                    <div class="job-title mb-1">
+                        <h3 class="font-medium text-3xl">A <span>Front-end</span> developer & <span>UI/UX</span> Designer</h3>
+                    </div>
+                    <p class="introduce text-xl font-normal">I'm a UI/UX Desginer with a front-end developer background. I believe that the knowledge I have gained from software development will help me in my path to become a professional UI/UX Designer and create valuable products in the future.</p>
+                </div>    
+                <div class="header-info relative w-full mx-auto flex mt-12">
+                    <div class="follow-box">
+                        <h3>Follow me on</h3>
+                        <div class="social-link">
+                            <a href="https://github.com/nguyenngovietanh" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nguy%E1%BB%85n-ng%C3%B4-vi%E1%BB%87t-anh-6a770a194/" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.behance.net/nguyenngovf9f7" target="_blank">
+                                <i class="fa-brands fa-square-behance"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="social-box ml-40">
+                        <h3>My skills</h3>
+                        <div class="skills">
+                            <div class="my-skills">
+                                <a href="#" alt="Figma">
+                                    <i class="fa-brands fa-figma"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-html5"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-css3-alt"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-square-js"></i>
+                                </a>
+                                <a href="#" >
+                                    <i class="fa-brands fa-react"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Portfolio -->
+            <div class="port-container relative w-full h-auto mt-28" id="portfolio">
+                <div class="port-title flex justify-center items-center pt-20">
+                    <h3 class="text-3xl">Portfolio</h3> 
+                    <div class="port-title-line"></div>
+                </div>
+                <div class="port-carousel relative w-full mx-auto">
+                    <div class="slider w-full">
+                        <div class="slider__item">
+                            <div class="slider__item--img">
+                                <img src="./assets/images/Petfriend.png" alt="">
+                                <div class="item-overlay"></div>
+                                <h2 class="project-name">Petfriend</h2>
+                                <h3 class="project-description">Social network for <br> your pets</h3>
+                                <button class="w-28 h-8 bg-white rounded-md bg-neutral-100">UX/UI Design</button> <br>
+                                <a href="#" class="project-details-btn">Details View</a>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__item--img">
+                                <img src="./assets/images/Wokspace.png" alt="">
+                                <div class="item-overlay"></div>
+                                <h2 class="project-name">Wokspace</h2>
+                                <h3 class="project-description">Co-working space <br> booking platform</h3>
+                                <button class="w-28 h-8 bg-white rounded-md bg-neutral-100">UX/UI Design</button> <br>
+                                <a href="#" class="project-details-btn">Details View</a>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__item--img">
+                                <img src="./assets/images/Truewingtip.png" alt="">
+                                <div class="item-overlay"></div>
+                                <h2 class="project-name">True Wingtip</h2>
+                                <h3 class="project-description">Board games <br> online store website</h3>
+                                <button class="w-28 h-8 bg-white rounded-md bg-neutral-100">UX/UI Design</button> <br>
+                                <a href="#" class="project-details-btn">Details View</a>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__item--img">
+                                <img src="./assets/images/sample1.png" alt="">
+                                <div class="item-overlay"></div>
+                                <h2 class="project-name">Coming soon</h2>
+                                <h3 class="project-description">Lorem ipsum dolor sit amet <br> consectetur adipiscing</h3>
+                                <button class="w-28 h-8 bg-white rounded-md bg-neutral-100">UX/UI Design</button> <br>
+                                <a href="#" class="project-details-btn">Details View</a>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__item--img">
+                                <img src="./assets/images/sample2.png" alt="">
+                                <div class="item-overlay"></div>
+                                <h2 class="project-name">Coming soon</h2>
+                                <h3 class="project-description">Lorem ipsum dolor sit amet <br> consectetur adipiscing</h3>
+                                <button class="w-28 h-8 bg-white rounded-md bg-neutral-100">UX/UI Design</button> <br>
+                                <a href="#" class="project-details-btn">Details View</a>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__item--img">
+                                <img src="./assets/images/sample3.png" alt="">
+                                <div class="item-overlay"></div>                                    
+                                <h2 class="project-name">Coming soon</h2>
+                                <h3 class="project-description">Lorem ipsum dolor sit amet <br> consectetur adipiscing</h3>
+                                <button class="w-28 h-8 bg-white rounded-md bg-neutral-100">UX/UI Design</button> <br>
+                                <a href="#" class="project-details-btn">Details View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Resume -->
+            <div class="resume-container relative w-full h-auto pt-20" id="resume">
+                <div class="resume-title flex justify-center items-center">
+                    <h3 class="text-3xl">Resume</h3> 
+                    <div class="resume-title-line"></div>
+                </div>
+                <div class="resume-content w-full mx-auto">
+                    <div class="summary-box relative pt-8 z-50">
+                        <h3 class="text-2xl uppercase font-bold">Summary</h3>
+                        <div class="summary-content w-full h-auto py-14 mt-8 text-white text-xl">
+                            <div class="summary-content__avatar">
+                                <img src="./assets/images/avatar.jpg" alt="" class="w-28 h-28 rounded-full mx-auto">
+                            </div>
+                            <div class="summary-content__bio flex px-14 mt-10 items-center">
+                                <div class="summary-content__bio--info">
+                                    <ul class="list-disc pl-8">
+                                        <li>DOB: 13/07/1999</li>
+                                        <li>Address: Collective zone 708, Lien Ninh commune, Thanh Tri district, Hanoi.</li>
+                                        <li>Email: nguyenngovietanh19@gmail.com</li>
+                                    </ul>
+                                </div>
+                                <div class="summary-content__bio--divier flex justify-center">
+                                    <div class="divier"></div>
+                                </div>
+                                <div class="summary-content__bio--intro w-full text-justify">
+                                    <p>I'm a UI/UX Desginer with a front-end developer background. I believe that the knowledge I have gained from software development will help me in my path to become a professional UI/UX Designer and create valuable products in the future.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-1"></div>
+                    <div class="education-box pt-20">
+                        <h3 class="text-2xl uppercase font-bold">Education</h3>
+                        <div class="education-content text-2xl w-full h-auto mt-8">
+                            <div class="education-content__details">
+                                <p class="education-content__details--name font-bold">
+                                    Hanoi University of Science & Technology
+                                </p>
+                                <p class="education-content__details--major text-white font-medium">
+                                    BKACAD - Computer Progammer &nbsp; &nbsp; &nbsp; <span>| &nbsp; &nbsp; &nbsp; Aug 2017 - Jul 2020</span>
+                                </p>
+                            </div>
+                            <div class="education-content__details mt-8">
+                                <p class="education-content__details--name font-bold">
+                                    FPT Software Academy
+                                </p>
+                                <p class="education-content__details--major text-white font-medium">
+                                    Professional Angular Developer &nbsp; &nbsp; &nbsp; <span>| &nbsp; &nbsp; &nbsp; Mar 2021 - Sep 2021
+                                </p>
+                            </div>
+                            <div class="education-content__details mt-8">
+                                <p class="education-content__details--name font-bold">
+                                    MindX Technology School
+                                </p>
+                                <p class="education-content__details--major text-white font-medium">
+                                    UX/UI Design &nbsp; &nbsp; &nbsp; <span>| &nbsp; &nbsp; &nbsp; Feb 2023 - Present
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-box relative pt-20">
+                        <h3 class="text-2xl uppercase font-bold">Work Experience</h3>
+                        <div class="education-content relative z-50 text-2xl text-white w-full h-auto mt-8">
+                            <div class="education-content__box w-full flex mt-20 items-center">
+                                <div class="education-content__box--time flex justify-end">
+                                    <p>From Jun - 2017 to Jun - 2018</p>
+                                </div>
+                                <div class="education-content__box--logo relative flex justify-center mx-auto rounded-full">
+                                    <img src="./assets/images/Company/Edutalk.png" alt="" class="w-full h-full rounded-full">
+                                </div>
+                                <div class="education-content__box--details">
+                                    <p class="job-company font-bold">Edutalk</p>
+                                    <p class="job-position text-xl">Sales part-time</p>
+                                    <p class="job-description text-base">Counseling to help students find the match course (products are English and soft skills courses)</p>
+                                </div>
+                            </div>
+                            <div class="education-content__box w-full flex items-center">
+                                <div class="education-content__box--details flex flex-col items-end">
+                                    <p class="job-company font-bold">GEMSVN CO.,LTD</p>
+                                    <p class="job-position text-xl">Sales support</p>
+                                    <p class="job-description text-base text-right">Find partners (who are KOLs, Influencers), invite them to cooperate according to the crowdfunding model, open campain to sell merchandise to their fan community</p>
+                                </div>
+                                <div class="education-content__box--logo relative flex justify-center mx-auto rounded-full">
+                                    <img src="./assets/images/Company/Gemsvn.png" alt="" class="w-full h-full rounded-full">
+                                </div>
+                                <div class="education-content__box--time">
+                                    <p>From Jun - 2018 to Jan - 2021</p>
+                                </div>
+                            </div>
+                            <div class="education-content__box w-full flex items-center">
+                                <div class="education-content__box--time flex justify-end">
+                                    <p>From Feb - 2022 to Jun - 2022</p>
+                                </div>
+                                <div class="education-content__box--logo relative flex justify-center mx-auto rounded-full">
+                                    <img src="./assets/images/Company/Onschool.png" alt="" class="w-full h-full rounded-full">
+                                </div>
+                                <div class="education-content__box--details">
+                                    <p class="job-company font-bold">Onschool Edtech Group</p>
+                                    <p class="job-position text-xl">Intern developer</p>
+                                    <p class="job-description text-base">Participate in company projects and undertake front-end development (Using HTML, CSS, Javascript, ReactJS, PHP, Laravel,...)</p>
+                                </div>
+                            </div>
+                            <div class="education-content__box w-full flex items-center">
+                                <div class="education-content__box--details flex flex-col items-end">
+                                    <p class="job-company font-bold">Chip Chip Education & Technology JSC</p>
+                                    <p class="job-position text-xl">Front-end developer</p>
+                                    <p class="job-description text-base text-right">Participate in front-end development for the company's internal projects and outsource projects (Using HTML, CSS, Javascript, React Native)</p>
+                                </div>
+                                <div class="education-content__box--logo relative flex justify-center mx-auto rounded-full">
+                                    <img src="./assets/images/Company/Chipchip.png" alt="" class="w-full h-full rounded-full">
+                                </div>
+                                <div class="education-content__box--time">
+                                    <p>From Jul - 2022 to Dec - 2022</p>
+                                </div>
+                            </div>
+                            <div class="education-content__box w-full flex items-center">
+                                <div class="education-content__box--time flex justify-end">
+                                    <p>From Dec - 2022 to Jun - 2023</p>
+                                </div>
+                                <div class="education-content__box--logo relative flex justify-center mx-auto rounded-full">
+                                    <img src="./assets/images/Company/Infiniq.png" alt="" class="w-full h-full rounded-full">
+                                </div>
+                                <div class="education-content__box--details">
+                                    <p class="job-company font-bold">INFINIQ Vietnam CO.,LTD</p>
+                                    <p class="job-position text-xl">Data annotator</p>
+                                    <p class="job-description text-base">Label data in text, audio, image, video, or mixed format, so it can be understood by machines. Thereby making assessments, analyzing, processing and performing assigned tasks based on the provided data.</p>
+                                </div>
+                            </div>
+                            <div class="education-content-divier"></div>
+                        </div> 
+                    </div>
+                    <div class="wid-box pt-20">
+                        <h3 class="text-2xl uppercase font-bold">What I do?</h3>
+                        <div class="wid-content text-2xl text-white w-full h-auto mt-14 flex">
+                            <div class="wid-content__item">
+                                <div class="wid-content__item--logo flex justify-center">
+                                    <div class="item-logo rounded-full flex justify-center items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#F5B32F" height="40px" width="40px" version="1.1" id="Layer_1" viewBox="0 0 512.001 512.001" xml:space="preserve">
+                                            <g><g><g>
+                                                <path d="M287.353,195.207c0,5.88,4.767,10.647,10.647,10.647s10.647-4.767,10.647-10.647c0-48.433-39.403-87.836-87.836-87.836     s-87.836,39.403-87.836,87.836c0,5.88,4.767,10.647,10.647,10.647c5.88,0,10.647-4.767,10.647-10.647     c0-36.691,29.852-66.542,66.542-66.542S287.353,158.516,287.353,195.207z"/>
+                                                <path d="M391.692,295.605c-11.217,0-21.183,4.646-28.214,12.211c-1.592-1.712-3.34-3.265-5.213-4.659V36.071     C358.265,16.182,342.084,0,322.194,0H117.521c-19.89,0-36.072,16.182-36.072,36.071v375.022c0,19.89,16.182,36.072,36.072,36.072     h77.552c1.636,2.698,3.429,5.306,5.388,7.799c7.973,10.149,12.364,22.845,12.364,35.75v10.64c0,5.88,4.767,10.647,10.647,10.647     h167.155c5.88,0,10.647-4.767,10.647-10.647v-10.64c0-12.906,4.391-25.601,12.364-35.75     c10.908-13.882,16.915-31.25,16.915-48.905v-70.53C430.553,313.142,413.484,295.605,391.692,295.605z M102.742,36.071     c0-8.148,6.63-14.778,14.779-14.778h204.673c8.149,0,14.778,6.63,14.778,14.778v19.824H102.742V36.071z M117.521,425.872     c-8.149,0-14.779-6.63-14.779-14.779V391.27h80.805v14.791c0,6.704,0.871,13.366,2.542,19.812H117.521z M183.547,195.207v174.769     h-80.805V77.189h234.229v218.459c-0.566-0.023-1.134-0.044-1.708-0.044c-11.217,0-21.183,4.646-28.214,12.211     c-7.031-7.563-16.997-12.211-28.214-12.211c-6.36,0-12.318,1.494-17.567,4.167V195.207c0-22.388-17.07-39.925-38.861-39.925     S183.547,172.819,183.547,195.207z M409.259,406.06c0,12.906-4.392,25.601-12.364,35.749c-1.855,2.36-3.556,4.829-5.122,7.376     h-79.322c-5.88,0-10.647,4.767-10.647,10.647s4.767,10.647,10.647,10.647h70.19c-1.744,6.577-2.66,13.38-2.661,20.229H234.119     c-0.001-17.652-6.008-35.017-16.915-48.899c-7.973-10.147-12.364-22.843-12.364-35.749V195.207     c0-10.622,7.552-18.632,17.567-18.632s17.567,8.01,17.567,18.632V335.53c0,5.88,4.767,10.647,10.647,10.647     c5.88,0,10.647-4.767,10.647-10.647c0-10.622,7.552-18.632,17.567-18.632c10.015,0,17.567,8.01,17.567,18.632     c0,5.88,4.767,10.647,10.647,10.647c5.88,0,10.647-4.767,10.647-10.647c0-10.622,7.552-18.632,17.567-18.632     s17.567,8.01,17.567,18.632c0,5.88,4.767,10.647,10.647,10.647s10.647-4.767,10.647-10.647c0-10.622,7.552-18.632,17.567-18.632     s17.567,8.01,17.567,18.632V406.06z"/>
+                                                <path d="M272.525,449.184h-4.791c-5.88,0-10.647,4.767-10.647,10.647c0,5.88,4.767,10.647,10.647,10.647h4.791     c5.88,0,10.647-4.767,10.647-10.647C283.172,453.951,278.406,449.184,272.525,449.184z"/>
+                                            </g></g></g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="wid-content__item--title pt-5">Web/App Design</div>
+                                <div class="wid-content__item--description mx-auto text-center text-xl pt-3">I design user interfaces and user experiences for web/app <br> products using Figma.</div>
+                            </div>
+                            <div class="wid-content__item">
+                                <div class="wid-content__item--logo flex justify-center">
+                                    <div class="item-logo rounded-full flex justify-center items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#F5B32F" width="40px" height="40px" viewBox="0 0 32 32">
+                                            <path d="M7.11,23.52l1.42-1.41C5.14,18.72,3.37,17,2.39,16L8.53,9.89A1,1,0,1,0,7.11,8.47L.29,15.29A1.05,1.05,0,0,0,0,16a1,1,0,0,0,.3.71Z"/>
+                                            <path d="M31.71,15.29c-.1-.09-6.82-6.82-6.82-6.82L23.48,9.89c3.38,3.38,5.15,5.16,6.13,6.09l-6.13,6.13a1,1,0,0,0,.7,1.71,1,1,0,0,0,.71-.3l6.82-6.81A1,1,0,0,0,32,16,1,1,0,0,0,31.71,15.29Z"/>
+                                            <path d="M13.27,27.91a1,1,0,0,0,1-.76L19.7,5.33a1,1,0,0,0-1.94-.48L12.3,26.67A1,1,0,0,0,13,27.88,1,1,0,0,0,13.27,27.91Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="wid-content__item--title pt-5">Web/App Development</div>
+                                <div class="wid-content__item--description mx-auto text-center text-xl pt-3">I develop front-end arrays for web and mobile applications using HTML, CSS, Javascript and ReactJS/React Native.</div>
+                            </div>
+                            <div class="wid-content__item">
+                                <div class="wid-content__item--logo flex justify-center">
+                                    <div class="item-logo rounded-full flex justify-center items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#F5B32F" width="40px" height="40px" viewBox="0 0 56 56">
+                                            <path d="M 13.5039 50.9570 L 26.3476 50.9570 C 25.1055 49.9023 24.0508 48.6367 23.2773 47.1836 L 13.7148 47.1836 C 11.3008 47.1836 10.0117 45.9414 10.0117 43.5976 L 10.0117 8.1367 C 10.0117 
+                                                5.8164 11.2773 4.4805 13.7148 4.4805 L 38.2070 4.4805 C 40.5508 4.4805 41.8867 5.7930 41.8867 8.1367 L 41.8867 28.5742 C 43.3398 29.3476 44.6055 30.3789 45.6602 31.6211 L 45.6602 8.0664 
+                                                C 45.6602 3.1679 43.2461 .7070 38.3945 .7070 L 13.5039 .7070 C 8.6758 .7070 6.2383 3.1914 6.2383 8.0664 L 6.2383 43.6211 C 6.2383 48.5195 8.6758 50.9570 13.5039 50.9570 Z M 17.0898 14.0430 
+                                                L 34.8555 14.0430 C 35.6758 14.0430 36.3086 13.3867 36.3086 12.5664 C 36.3086 11.7695 35.6758 11.1601 34.8555 11.1601 L 17.0898 11.1601 C 16.2227 11.1601 15.6133 11.7695 15.6133 12.5664 
+                                                C 15.6133 13.3867 16.2227 14.0430 17.0898 14.0430 Z M 17.0898 22.2226 L 34.8555 22.2226 C 35.6758 22.2226 36.3086 21.5664 36.3086 20.7461 C 36.3086 19.9492 35.6758 19.3398 34.8555 19.3398 
+                                                L 17.0898 19.3398 C 16.2227 19.3398 15.6133 19.9492 15.6133 20.7461 C 15.6133 21.5664 16.2227 22.2226 17.0898 22.2226 Z M 35.1367 50.9570 C 37.2461 50.9570 39.2383 50.3476 40.8789 49.2461 
+                                                L 46.1524 54.5430 C 46.7148 55.0820 47.2305 55.2930 47.8633 55.2930 C 48.9414 55.2930 49.7617 54.4492 49.7617 53.2539 C 49.7617 52.7383 49.5040 52.2226 49.1056 51.8242 L 43.7617 46.4805 
+                                                C 44.9570 44.7695 45.6602 42.6836 45.6602 40.4336 C 45.6602 34.5976 40.9492 29.8867 35.1367 29.8867 C 29.3242 29.8867 24.5664 34.6445 24.5664 40.4336 C 24.5664 46.2461 29.3242 50.9570 
+                                                35.1367 50.9570 Z M 35.1367 47.6054 C 31.1524 47.6054 27.9180 44.3945 27.9180 40.4336 C 27.9180 36.5195 31.1524 33.2617 35.1367 33.2617 C 39.0508 33.2617 42.2851 36.5195 42.2851 40.4336 
+                                                C 42.2851 44.3945 39.0742 47.6054 35.1367 47.6054 Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="wid-content__item--title pt-5">UX Research</div>
+                                <div class="wid-content__item--description mx-auto text-center text-xl pt-3">I research, collect and analyze data about users and their needs. From there, find solutions to help develop products in the right direction.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activities-box pt-20">
+                        <h3 class="text-2xl uppercase font-bold">Extracurricular Activities</h3>
+                        <div class="activities-content relative z-50 text-2xl w-full h-auto mt-8">
+                            <div class="activities-content__details">
+                                <p class="activities-content__details--name font-bold">
+                                    Codeathon Hanoi 2017
+                                </p>
+                                <p class="activities-content__details--location text-white">
+                                    Techkids Coding School
+                                </p>
+                                <p class="activities-content__details--time">
+                                    Hanoi, 2017
+                                </p>
+                            </div>
+                            <div class="activities-content__details mt-6">
+                                <p class="activities-content__details--name font-bold">
+                                    Bach Khoa Open day 2018
+                                </p>
+                                <p class="activities-content__details--location text-white">
+                                    Hanoi University of Science and Technology
+                                </p>
+                                <p class="activities-content__details--time">
+                                    Hanoi, 2018
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hobbies-box pt-20 relative z-50">
+                        <h3 class="text-2xl uppercase font-bold">Hobbies</h3>
+                        <div class="hobbies-content text-2xl w-full h-auto mt-14 flex">
+                            <div class="hobbies-content__list w-1/3">
+                                <div class="hobbies-content__list--item flex items-center font-bold uppercase cursor-pointer">
+                                    <div class="item-icon">
+                                        <svg stroke="currentColor" fill="#ffffff" stroke-width="0" viewBox="0 0 24 24" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg"><path d="M19.071,4.929c-1.895-1.895-4.405-2.938-7.07-2.938c-2.666,0-5.177,1.044-7.072,2.938c-3.899,3.898-3.899,10.243,0,14.142 c1.895,1.895,4.406,2.938,7.073,2.938c2.666,0,5.176-1.043,7.07-2.937C22.971,15.174,22.971,8.829,19.071,4.929z M12.181,4h-0.359 c0.061-0.001,0.119-0.009,0.18-0.009S12.12,3.999,12.181,4z M18.243,17H16l-1.258,2.516c-0.868,0.318-1.791,0.493-2.741,0.493 c-0.952,0-1.876-0.175-2.746-0.494L8,17.01H5.765c-0.846-1.052-1.387-2.269-1.623-3.532L6,11L4.784,8.567 c0.381-0.804,0.895-1.56,1.559-2.224c0.919-0.92,2.021-1.584,3.22-1.969L12,6l2.438-1.625c1.198,0.385,2.301,1.049,3.22,1.968 c0.663,0.663,1.177,1.418,1.558,2.221L18,11l1.858,2.478C19.623,14.737,19.085,15.95,18.243,17z"></path><path d="M8.5 11L10 15 14 15 15.5 11 12 8.5z"></path></svg>
+                                    </div>
+                                    <div class="item-name ml-2" id="football" onclick="chooseHobbies1()">Football</div>
+                                </div>
+                                <div class="hobbies-content__list--item flex items-center font-bold uppercase cursor-pointer mt-3">
+                                    <div class="item-icon">
+                                        <svg stroke="currentColor" fill="#ffffff" stroke-width="0" viewBox="0 0 24 24" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M12.366 13.366l1.775 1.025a9.98 9.98 0 0 0-.311 7.44A9.911 9.911 0 0 1 12 22a9.964 9.964 0 0 1-4.11-.88l4.476-7.754zm3.517 2.032l4.234 2.444a10.033 10.033 0 0 1-4.363 3.43 7.988 7.988 0 0 1 .008-5.57l.121-.304zM8.86 11.342l1.775 1.024-4.476 7.75a10.026 10.026 0 0 1-3.59-4.785 9.978 9.978 0 0 0 6.085-3.713l.206-.276zm13.046-.726c.063.453.095.915.095 1.384a9.964 9.964 0 0 1-.88 4.11l-4.236-2.445a7.985 7.985 0 0 1 4.866-3.021l.155-.028zM2.881 7.891l4.235 2.445a7.99 7.99 0 0 1-5.021 3.05A10.14 10.14 0 0 1 2 12c0-1.465.315-2.856.88-4.11zm14.961-4.008a10.026 10.026 0 0 1 3.59 4.785 9.985 9.985 0 0 0-6.086 3.715l-.205.276-1.775-1.025 4.476-7.75zM12 2c1.465 0 2.856.315 4.11.88l-4.476 7.754L9.859 9.61a9.98 9.98 0 0 0 .311-7.442A9.922 9.922 0 0 1 12 2zm-3.753.73a7.992 7.992 0 0 1-.01 5.57l-.12.303-4.234-2.445a10.036 10.036 0 0 1 4.164-3.346l.2-.083z"></path></g></svg>
+                                    </div>
+                                    <div class="item-name ml-2" id="basketball" onclick="chooseHobbies2()">Basketball</div>
+                                </div>
+                                <div class="hobbies-content__list--item flex items-center font-bold uppercase cursor-pointer mt-3">
+                                    <div class="item-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 100 100" fill="#ffffff">
+                                            <path d="M63.7917 78.7502C59.7917 82.9168 55.2084 87.2085 50.0001 91.6668C27.7917 72.7085 16.6667 56.3335 16.6667 42.5002C16.6667 21.7502 32.5001 8.3335 50.0001 8.3335C67.4584 8.3335 83.2917 21.7085 83.3334 42.3752L92.0417 33.6668L97.9167 39.5835L79.1667 58.3335L60.4167 39.5835L66.2917 33.7085L75.0001 42.3752C74.9584 27.2918 63.9167 16.6668 50.0001 16.6668C36.0417 16.6668 25.0001 27.3752 25.0001 42.5002C25.0001 52.2502 33.1251 65.1668 50.0001 80.5835C52.6667 78.1252 55.1251 75.7502 57.3751 73.4585C56.6419 72.0117 56.2567 70.4138 56.2501 68.7918C56.2501 66.0292 57.3475 63.3796 59.3011 61.4261C61.2546 59.4726 63.9041 58.3752 66.6667 58.3752C69.4294 58.3752 72.0789 59.4726 74.0324 61.4261C75.9859 63.3796 77.0834 66.0292 77.0834 68.7918C77.082 70.4031 76.7055 71.9919 75.984 73.4325C75.2624 74.8732 74.2154 76.1261 72.9259 77.0922C71.6364 78.0584 70.1398 78.7111 68.5544 78.9989C66.9691 79.2866 65.3385 79.2015 63.7917 78.7502Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <div class="item-name ml-2" id="travel" onclick="chooseHobbies3()">Travel & camping</div>
+                                </div>
+                                <div class="hobbies-content__list--item flex items-center font-bold uppercase cursor-pointer mt-3">
+                                    <div class="item-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 24 24" fill="none">
+                                            <g id="Environment / Coffee">
+                                            <path id="Vector" d="M4 20H10.9433M10.9433 20H11.0567M10.9433 20C10.9622 20.0002 10.9811 20.0002 11 20.0002C11.0189 20.0002 11.0378 20.0002 11.0567 20M10.9433 20C7.1034 19.9695 4 16.8468 4 12.9998V8.92285C4 8.41305 4.41305 8 4.92285 8H17.0767C17.5865 8 18 8.41305 18 8.92285V9M11.0567 20H18M11.0567 20C14.8966 19.9695 18 16.8468 18 12.9998M18 9H19.5C20.8807 9 22 10.1193 22 11.5C22 12.8807 20.8807 14 19.5 14H18V12.9998M18 9V12.9998M15 3L14 5M12 3L11 5M9 3L8 5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="item-name ml-2" id="coffee" onclick="chooseHobbies4()">Coffee</div>
+                                </div>
+                                <div class="hobbies-content__list--item flex items-center font-bold uppercase cursor-pointer mt-3">
+                                    <div class="item-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 16 16" fill="#ffffff" class="bi bi-headphones">
+                                            <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="item-name ml-2" id="podcast" onclick="chooseHobbies5()">Podcast</div>
+                                </div>
+                            </div>
+                            <div class="hobbies-content__gallery w-2/3 relative overflow-hidden">
+                                <img src="./assets/images/Hobbies/football-bu.jpg" alt="" class="w-full h-auto" id="overlay-img">
+                                <div class="hobbies-content__gallery--overlay absolute w-full h-full text-3xl text-white flex" id="overlay">
+                                    <div class="overlay-content h-full p-10 w-4/5 flex flex-col justify-end" id="overlay-content">
+                                        <p id="overlay-description">I've been playing football since I was a kid. It helps me connect with many great friends and enjoy the game.</p>
+                                        <div class="hobbies-divier mt-3" id="hobbies-divier"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact -->
+            <div class="contact-container relative w-full h-auto py-20" id="contact">
+                <div class="contact-title flex justify-center items-center">
+                    <h3 class="text-3xl">Contact</h3> 
+                    <div class="contact-title-line"></div>
+                </div>
+                <div class="contact-content relative z-50 w-full mx-auto flex flex-wrap pt-8">
+                    <div class="contact-content__box w-1/2">
+                        <div class="contact-content__item flex">
+                            <div class="contact-content__item--icon rounded-full flex justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="Layer_1" width="30px" height="30px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                    <path fill="#ffffff" d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24  C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24  C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-content__item--details w-4/5 flex flex-col justify-center ml-5">
+                                <div class="contact-details-title font-bold text-xl">My address</div>
+                                <div class="contact-details-description leading-5 text-white mt-1">
+                                    <p>Collective zone 708, Lien Ninh commune, Thanh Tri district, Hanoi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-content__box w-1/2">
+                        <div class="contact-content__item flex">
+                            <div class="contact-content__item--icon rounded-full flex justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 16 16" version="1.1">
+                                    <path fill="#ffffff" d="M12 10c-0.8 0-1.4 0.3-2 0.8l-3.2-1.8c0.1-0.3 0.2-0.7 0.2-1s-0.1-0.7-0.2-1l3.2-1.8c0.6 0.5 1.2 0.8 2 0.8 1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3c0 0.2 0 0.3 0 0.5l-3.5 1.9c-0.4-0.2-0.9-0.4-1.5-0.4-1.6 0-3 1.3-3 3v0c0 1.6 1.4 3 3 3 0.6 0 1.1-0.2 1.5-0.4l3.5 1.9c0 0.2 0 0.3 0 0.5 0 1.7 1.3 3 3 3s3-1.3 3-3-1.3-3-3-3z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-content__item--details w-4/5 flex flex-col justify-center ml-5">
+                                <div class="contact-details-title font-bold text-xl">My social network</div>
+                                <div class="contact-details-description flex text-white mt-1">
+                                    <a href="#">
+                                        <i class="fa-brands fa-square-facebook"></i>
+                                    </a>
+                                    <a href="#" class="ml-2">
+                                        <i class="fa-brands fa-square-instagram"></i>
+                                    </a>
+                                    <a href="#" class="ml-2">
+                                        <i class="fa-brands fa-skype"></i>
+                                    </a>
+                                    <a href="#" class="ml-2">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-content__box w-1/2">
+                        <div class="contact-content__item flex">
+                            <div class="contact-content__item--icon rounded-full flex justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" id="mail" class="icon glyph">
+                                    <path d="M22,8.32V18a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V8.69L4,9.78l7.52,4.1A1,1,0,0,0,12,14a1,1,0,0,0,.5-.14L20,9.49Z" style="fill:#ffffff"/>
+                                    <path d="M22,6h0L20,7.18l-8,4.67L4,7.5,2,6.4V6A2,2,0,0,1,4,4H20A2,2,0,0,1,22,6Z" style="fill:#ffffff"/>
+                                </svg>
+                            </div>
+                            <div class="contact-content__item--details w-4/5 flex flex-col justify-center ml-5">
+                                <div class="contact-details-title font-bold text-xl">My email</div>
+                                <div class="contact-details-description leading-5 text-white mt-1">
+                                    <p>nguyenngovietanh19@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-content__box w-1/2">
+                        <div class="contact-content__item flex">
+                            <div class="contact-content__item--icon rounded-full flex justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="40px" height="40px" viewBox="0 0 32 32">
+                                    <path d="M11.748 5.773S11.418 5 10.914 5c-.496 0-.754.229-.926.387S6.938 7.91 6.938 7.91s-.837.731-.773 2.106c.054 1.375.323 3.332 1.719 6.058 1.386 2.72 4.855 6.876 7.047 8.337 0 0 2.031 1.558 3.921 2.191.549.173 1.647.398 1.903.398.26 0 .719 0 1.246-.385.536-.389 3.543-2.807 3.543-2.807s.736-.665-.119-1.438c-.859-.773-3.467-2.492-4.025-2.944-.559-.459-1.355-.257-1.699.054-.343.313-.956.828-1.031.893-.112.086-.419.365-.763.226-.438-.173-2.234-1.148-3.899-3.426-1.655-2.276-1.837-3.02-2.084-3.824a.56.56 0 0 1 .225-.657c.248-.172 1.161-.933 1.161-.933s.591-.583.344-1.27-1.906-4.716-1.906-4.716z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-content__item--details w-4/5 flex flex-col justify-center ml-5">
+                                <div class="contact-details-title font-bold text-xl">My number</div>
+                                <div class="contact-details-description leading-5 text-white mt-1">
+                                    <p>+8438 7288 305</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- message -->
+                <div class="message-box border-b border-gray-900/10 p-8 mx-auto relative z-50">
+                    <div class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                        <div class="col-span-3">
+                            <label for="full-name" class="block text-base font-medium text-white">Full name</label>
+                            <div class="mt-2">
+                                <input type="text" name="full-name" id="full-name" placeholder="Enter your full name..." class="block w-full rounded-md py-1.5 text-zinc-600 shadow-sm placeholder:text-zinc-500 outline-none border-none pl-2">
+                            </div>
+                        </div>     
+                        <div class="col-span-3">
+                            <label for="email" class="block text-base font-medium text-white">Email</label>
+                            <div class="mt-2">
+                                <input type="email" name="email" id="email" placeholder="Enter your email..." class="block w-full rounded-md py-1.5 text-zinc-600 shadow-sm placeholder:text-zinc-500 outline-none border-none pl-2">
+                            </div>
+                        </div>
+                        <div class="col-span-6">
+                            <label for="messages" class="block text-base font-medium text-white">Messages</label>
+                            <div class="mt-2">
+                                <textarea name="messages" id="messages" placeholder="Message us something..." type="text" class="w-full rounded-md text-zinc-600 shadow-sm placeholder:text-zinc-500 h-32 outline-none border-none pt-1.5 pl-2"></textarea>
+                            </div>
+                        </div>
+                        <div class="send-btn col-span-6 flex justify-center">
+                            <button class="relative rounded-lg">Send message</button>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+            <!-- footer -->
+            <footer class="relative z-50">
+                <div class="footer w-full h-20 bg-zinc-900 text-white text-md flex justify-center items-center font-normal">
+                    <p>© 2023 Copyright <span class="font-bold">Viet Anh Nguyen</span>. All Rights Reserved.</p>
+                </div>
+            </footer>
+            <div class="cursor"></div>
+            <div class="cursor2"></div>
+            <div class="pattern-2"></div>
+            <div class="pattern-3"></div>
+            <div class="pattern-4"></div>
+            <div class="pattern-5"></div>
+        </div>
+
+        <script src="/assets/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script type="text/javascript">
+            $('.slider').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        </script>
+        <script type="text/javascript">
+            function blog() {
+                window.location.href = "/src/pages/blog.html";
+            }
+        </script>
+    </body>
+</html>
