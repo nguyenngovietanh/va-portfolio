@@ -4,18 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=divice-width, intinial-scale=1.0">
         <title>Viet Anh Portfolio</title>
-        <link rel="stylesheet" href="./assets/tailwind.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/style.css">
-        <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon"/>
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://kit.fontawesome.com/e8079f8f5d.js" crossorigin="anonymous"></script>
         <script src="./assets/all.min.js"></script>
     </head>
-    <body class="w-full h-auto scroll-smooth text-base bg-fixed	bg-center bg-cover cursor-default">
+    <body class="w-full h-auto scroll-smooth text-base bg-fixed	bg-center cursor-default">
         <div class="main-container text-left m-auto relative overflow-hidden">
             <!-- header -->
             <div class="header w-full flex items-center	flex-col">
@@ -528,11 +527,23 @@
                             </div>
                         </div>
                         <div class="send-btn col-span-6 flex justify-center">
-                            <button class="relative rounded-lg">Send message</button>
+                            <button type="submit" class="relative rounded-lg">Send message</button>
                         </div>
                     </div>
                 </div>          
             </div>
+            <div class="assistive-touch fixed">
+                <div class="play-toggle" id="play-theme-song">
+                    <div class="wave-line" id="wave-line-1"></div>
+                    <div class="wave-line" id="wave-line-2"></div>
+                    <div class="wave-line" id="wave-line-3"></div>
+                    <div class="wave-line" id="wave-line-4"></div>
+                    <div class="wave-line" id="wave-line-5"></div>
+                    <div class="wave-line" id="wave-line-6"></div>
+                    <div class="wave-line" id="wave-line-7"></div>
+                    <div class="wave-line" id="wave-line-8"></div>
+                </div>
+            </div> 
             <!-- footer -->
             <footer class="relative z-50">
                 <div class="footer w-full h-20 bg-zinc-900 text-white text-md flex justify-center items-center font-normal">
@@ -545,6 +556,9 @@
             <div class="pattern-3"></div>
             <div class="pattern-4"></div>
             <div class="pattern-5"></div>
+            <audio id="theme-song" controls autoplay loop hidden>
+                <source src="./assets/sounds/love-in-my-pocket.mp3" type="audio/mp3">
+            </audio>
         </div>
 
         <script src="./assets/main.js"></script>

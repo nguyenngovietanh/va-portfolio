@@ -39,7 +39,6 @@ let hobbiesDivier = document.getElementById("hobbies-divier");
 let overlayContent = document.getElementById("overlay-content");
 let overlay = document.getElementById("overlay");
 
-
 function chooseHobbies1() {
   football.style.color = "#ffffff";
   basketball.style.color = "#9a9a9a";
@@ -103,6 +102,65 @@ function chooseHobbies5() {
   overlay.style.justifyContent = "start";
   overlayDescription.style.textAlign ="start";
   overlayContent.style.alignItems = "start";
+}
+
+let themeSong = document.getElementById("theme-song");
+let playThemeSong = document.getElementById("play-theme-song");
+let waveLine1 = document.getElementById("wave-line-1");
+let waveLine2 = document.getElementById("wave-line-2");
+let waveLine3 = document.getElementById("wave-line-3");
+let waveLine4 = document.getElementById("wave-line-4");
+let waveLine5 = document.getElementById("wave-line-5");
+let waveLine6 = document.getElementById("wave-line-6");
+let waveLine7 = document.getElementById("wave-line-7");
+let waveLine8 = document.getElementById("wave-line-8");
+
+playThemeSong.onclick = function() {
+  if(themeSong.paused) {
+    themeSong.play();
+    waveLine1.style.animation = "wave 1.2s linear 0s infinite";
+    waveLine2.style.animation = "wave 1.2s linear 0.3s infinite";
+    waveLine3.style.animation = "wave 1.2s linear 0.6s infinite";
+    waveLine4.style.animation = "wave 1.2s linear 0.9s infinite";
+    waveLine5.style.animation = "wave 1.2s linear 0.6s infinite";
+    waveLine6.style.animation = "wave 1.2s linear 0.3s infinite";
+    waveLine7.style.animation = "wave 1.2s linear 0s infinite";
+    waveLine8.style.animation = "wave 1.2s linear 0.3s infinite";
+    waveLine1.style.background = "#f5b32f";
+    waveLine2.style.background = "#f5b32f";
+    waveLine3.style.background = "#f5b32f";
+    waveLine4.style.background = "#f5b32f";
+    waveLine5.style.background = "#f5b32f";
+    waveLine6.style.background = "#f5b32f";
+    waveLine7.style.background = "#f5b32f";
+    waveLine8.style.background = "#f5b32f";
+  } else {
+    themeSong.pause();
+    waveLine1.style.animation = "none";
+    waveLine1.style.background = "#ffffff";
+    waveLine1.style.height = "12px";
+    waveLine2.style.animation = "none";
+    waveLine2.style.background = "#ffffff";
+    waveLine2.style.height = "18px";
+    waveLine3.style.animation = "none";
+    waveLine3.style.background = "#ffffff";
+    waveLine3.style.height = "16px";
+    waveLine4.style.animation = "none";
+    waveLine4.style.background = "#ffffff";
+    waveLine4.style.height = "10px";
+    waveLine5.style.animation = "none";
+    waveLine5.style.background = "#ffffff";
+    waveLine5.style.height = "14px";
+    waveLine6.style.animation = "none";
+    waveLine6.style.background = "#ffffff";
+    waveLine6.style.height = "18px";
+    waveLine7.style.animation = "none";
+    waveLine7.style.background = "#ffffff";
+    waveLine7.style.height = "16px";
+    waveLine8.style.animation = "none";
+    waveLine8.style.background = "#ffffff";
+    waveLine8.style.height = "12px";
+  }
 }
 
 
