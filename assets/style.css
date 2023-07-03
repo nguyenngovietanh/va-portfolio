@@ -826,7 +826,7 @@ body {
     border-radius: 50%;
     background: rgba(50, 49, 49, 0.6);
     position: absolute;
-    top: 5800px;
+    top: 5700px;
     right: -210px;
 }
 
@@ -912,7 +912,7 @@ body {
 
 .back-to-homepage {
     position: relative;
-    transition: all 0.8s ease-in-out;
+    transition: all 0.2s ease-in-out;
     background: #ffffff00;
     color: #F5B32F;
     border: 2px solid #F5B32F;
@@ -931,7 +931,7 @@ body {
     top: 0;
     left: 0;
     transform: scaleX(0);
-    transition: transform 0.6s;
+    transition: transform 1s;
     transform-origin: 0 0;
     transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
 }
@@ -940,6 +940,6 @@ body {
     transform: scaleX(1);
 }
 
-.back-to-homepage:hover a {
-    color: #ffffff;
+.back-to-homepage:hover {
+    color: #00000000;
 }

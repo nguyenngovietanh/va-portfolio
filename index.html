@@ -13,6 +13,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://kit.fontawesome.com/e8079f8f5d.js" crossorigin="anonymous"></script>
         <script src="./assets/all.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
     <body class="w-full h-auto scroll-smooth text-base bg-fixed	bg-center cursor-default">
         <div class="main-container text-left m-auto relative overflow-hidden">
@@ -507,29 +508,29 @@
                 </div>
                 <!-- message -->
                 <div class="message-box border-b border-gray-900/10 p-8 mx-auto relative z-50">
-                    <div class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                        <div class="col-span-3">
+                    <form id="form" class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                        <div class="form-controls col-span-3">
                             <label for="full-name" class="block text-base font-medium text-white">Full name</label>
                             <div class="mt-2">
                                 <input type="text" name="full-name" id="full-name" placeholder="Enter your full name..." class="block w-full rounded-md py-1.5 text-zinc-600 shadow-sm placeholder:text-zinc-500 outline-none border-none pl-2">
                             </div>
                         </div>     
-                        <div class="col-span-3">
+                        <div class="form-controls col-span-3">
                             <label for="email" class="block text-base font-medium text-white">Email</label>
                             <div class="mt-2">
                                 <input type="email" name="email" id="email" placeholder="Enter your email..." class="block w-full rounded-md py-1.5 text-zinc-600 shadow-sm placeholder:text-zinc-500 outline-none border-none pl-2">
                             </div>
                         </div>
-                        <div class="col-span-6">
+                        <div class="form-controls col-span-6">
                             <label for="messages" class="block text-base font-medium text-white">Messages</label>
                             <div class="mt-2">
                                 <textarea name="messages" id="messages" placeholder="Message us something..." type="text" class="w-full rounded-md text-zinc-600 shadow-sm placeholder:text-zinc-500 h-32 outline-none border-none pt-1.5 pl-2"></textarea>
                             </div>
                         </div>
                         <div class="send-btn col-span-6 flex justify-center">
-                            <button type="submit" class="relative rounded-lg">Send message</button>
+                            <button type="submit" id="submit" class="relative rounded-lg" onclick="submit()">Send message</button>
                         </div>
-                    </div>
+                    </form>
                 </div>          
             </div>
             <div class="assistive-touch fixed">

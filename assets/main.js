@@ -163,5 +163,54 @@ playThemeSong.onclick = function() {
   }
 }
 
+$.validator.addMethod("email", function(value, element) {
+  return this.optional(element) || /^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(value);
+}, 'Địa chỉ email chưa hợp lệ');
+
+$(() => {
+  $('#form').submit(e => {
+      let fullName = $('#fullname').val().trim();
+      let email = $('#email').val().trim();
+      let message = $('#message').val().trim();
+      let regex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (fullName.length === 0) {
+        showError('Vui lòng nhập password');
+        e.preventDefault();
+      }
+
+      else if (email.length === 0) {
+          showError('Vui lòng nhập email');
+          e.preventDefault();
+      }
+
+      else if (!regex.test(email)) {
+          showError('Email không hợp lệ');
+          e.preventDefault();
+      }
+
+      else if (regex.test(email) && fullName.length > 0 && email.length > 0) {
+          console.log(fullName);
+          console.log(email); 
+          swal({
+              title: "Chúc mừng",
+              text: "Bạn đã đăng nhập thành công!",
+              icon: "success",
+              }).then(ok => {
+                  if(ok) {
+                      window.location.href = "./list_student.php";
+                  }
+              })
+          e.preventDefault();
+      }
+  })
+})
+
+function showError(message) {
+  $('#errorMessage').html(message);
+  $('#errorMessage').show();
+}
+
+
 
 
