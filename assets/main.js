@@ -19,12 +19,9 @@ toggle.onclick = () => {
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.backgroundColor = "#18181b";
-    document.getElementById("navbar").style.boxShadow = "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px";
-    document.getElementById("logo").style.color = "#000000";
+    document.getElementById("navbar-hide").style.opacity = "1";
   } else {
-    document.getElementById("navbar").style.backgroundColor = "#ffffff00";
-    document.getElementById("navbar").style.boxShadow = "none";
+    document.getElementById("navbar-hide").style.opacity = "0";
   }
 }
 
@@ -163,53 +160,74 @@ playThemeSong.onclick = function() {
   }
 }
 
-$.validator.addMethod("email", function(value, element) {
-  return this.optional(element) || /^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(value);
-}, 'Địa chỉ email chưa hợp lệ');
+const body = document.querySelector('body');
+const statusMode = document.querySelector('#status-mode');
+const modeBtn = document.querySelector('.mode-btn');
+const lightModeDescription = document.querySelector(".toggle__status-mode-container--description");
 
-$(() => {
-  $('#form').submit(e => {
-      let fullName = $('#fullname').val().trim();
-      let email = $('#email').val().trim();
-      let message = $('#message').val().trim();
-      let regex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+statusMode.addEventListener('click', () => {
+  body.classList.toggle('lightmode');
 
-      if (fullName.length === 0) {
-        showError('Vui lòng nhập password');
-        e.preventDefault();
-      }
-
-      else if (email.length === 0) {
-          showError('Vui lòng nhập email');
-          e.preventDefault();
-      }
-
-      else if (!regex.test(email)) {
-          showError('Email không hợp lệ');
-          e.preventDefault();
-      }
-
-      else if (regex.test(email) && fullName.length > 0 && email.length > 0) {
-          console.log(fullName);
-          console.log(email); 
-          swal({
-              title: "Chúc mừng",
-              text: "Bạn đã đăng nhập thành công!",
-              icon: "success",
-              }).then(ok => {
-                  if(ok) {
-                      window.location.href = "./list_student.php";
-                  }
-              })
-          e.preventDefault();
-      }
-  })
+  // lightModeDescription.innerHTML = 'Light <br> mode';
+  
+  // if (body.classList.contains('lightmode')) {
+  //   lightModeDescription.innerHTML('Light <br> mode');
+  //   modeBtn.classList.remove('fa-cloud-moon');
+  //   modeBtn.classList.add('fa-sun');
+  // } else {
+  //   lightModeDescription.innerHTML('Dark <br> mode');
+  //   modeBtn.classList.remove('fa-sun');
+  //   modeBtn.classList.add('fa-cloud-moon');
+  // }
 })
 
-function showError(message) {
-  $('#errorMessage').html(message);
-  $('#errorMessage').show();
-}
+// $.validator.addMethod("email", function(value, element) {
+//   return this.optional(element) || /^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(value);
+// }, 'Địa chỉ email chưa hợp lệ');
+
+// $(() => {
+//   $('#form').submit(e => {
+//       let fullName = $('#fullname').val().trim();
+//       let email = $('#email').val().trim();
+//       let message = $('#message').val().trim();
+//       let regex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+//       if (fullName.length === 0) {
+//         showError('Vui lòng nhập password');
+//         e.preventDefault();
+//       }
+
+//       else if (email.length === 0) {
+//           showError('Vui lòng nhập email');
+//           e.preventDefault();
+//       }
+
+//       else if (!regex.test(email)) {
+//           showError('Email không hợp lệ');
+//           e.preventDefault();
+//       }
+
+//       else if (regex.test(email) && fullName.length > 0 && email.length > 0) {
+//           console.log(fullName);
+//           console.log(email); 
+//           swal({
+//               title: "Chúc mừng",
+//               text: "Bạn đã đăng nhập thành công!",
+//               icon: "success",
+//               }).then(ok => {
+//                   if(ok) {
+//                       window.location.href = "./list_student.php";
+//                   }
+//               })
+//           e.preventDefault();
+//       }
+//   })
+// })
+
+// function showError(message) {
+//   $('#errorMessage').html(message);
+//   $('#errorMessage').show();
+// }
 
 
 

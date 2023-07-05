@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="./assets/style.css">
         <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://kit.fontawesome.com/e8079f8f5d.js" crossorigin="anonymous"></script>
         <script src="./assets/all.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
@@ -33,12 +33,13 @@
                             </div>
                             <div class="toggle" id="toggle">
                                 <button class="toggle-icon relative w-full h-full flex flex-col items-end justify-around cursor-pointer border-none" id="toggle-icon">
-                                    <div class="toggle-line w-3/4 right-0 rounded-xl bg-white" id="toggle-line"></div>
+                                    <div class="toggle-line w-3/4 right-0 rounded-xl" id="toggle-line"></div>
                                 </button>
                             </div> 
                         </div>
                     </div>
                 </div>
+                <div class="navbar-hide w-full h-20 fixed" id="navbar-hide"></div>
                 <div class="header-content w-full relative text-white pt-32">
                     <div class="typing-effect inline-block whitespace-nowrap pt-2.5 w-full h-full mt-2.5 mb-0 mx-0">
                         <h1>Hi there<span>!</span></h1>
@@ -533,16 +534,34 @@
                     </form>
                 </div>          
             </div>
-            <div class="assistive-touch fixed">
-                <div class="play-toggle" id="play-theme-song">
-                    <div class="wave-line" id="wave-line-1"></div>
-                    <div class="wave-line" id="wave-line-2"></div>
-                    <div class="wave-line" id="wave-line-3"></div>
-                    <div class="wave-line" id="wave-line-4"></div>
-                    <div class="wave-line" id="wave-line-5"></div>
-                    <div class="wave-line" id="wave-line-6"></div>
-                    <div class="wave-line" id="wave-line-7"></div>
-                    <div class="wave-line" id="wave-line-8"></div>
+            <div class="assistive-touch fixed flex flex-col items-center justify-center rounded-lg">
+                <div class="assistive-touch-item">
+                    <div class="play-toggle" id="play-theme-song">
+                        <div class="wave-line" id="wave-line-1"></div>
+                        <div class="wave-line" id="wave-line-2"></div>
+                        <div class="wave-line" id="wave-line-3"></div>
+                        <div class="wave-line" id="wave-line-4"></div>
+                        <div class="wave-line" id="wave-line-5"></div>
+                        <div class="wave-line" id="wave-line-6"></div>
+                        <div class="wave-line" id="wave-line-7"></div>
+                        <div class="wave-line" id="wave-line-8"></div>
+                    </div>
+                    <div class="toggle__status-mode flex items-center" id="status-mode">
+                        <div class="toggle__status-mode-container flex items-center">
+                            <div class="toggle__status-mode-container--icon flex justify-center items-center">
+                                <i class="mode-btn fa-solid fa-cloud-moon"></i>
+                                <i class="mode-btn fa-solid fa-sun"></i>
+                            </div>
+                        </div>
+                        <div class="toggle__status-mode-container--description">
+                            <div class="dark-text" style="display: block;">
+                                <p>Dark <br> mode</p>
+                            </div>
+                            <div class="light-text" style="display: none;">
+                                <p>Light <br> mode</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div> 
             <!-- footer -->
