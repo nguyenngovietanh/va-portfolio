@@ -36,70 +36,193 @@ let hobbiesDivier = document.getElementById("hobbies-divier");
 let overlayContent = document.getElementById("overlay-content");
 let overlay = document.getElementById("overlay");
 
-function chooseHobbies1() {
-  football.style.color = "#ffffff";
-  basketball.style.color = "#9a9a9a";
-  travel.style.color = "#9a9a9a";
-  coffee.style.color = "#9a9a9a";
-  podcast.style.color = "#9a9a9a";
-  overlayImg.src = "./assets/images/Hobbies/football-bu.jpg";
-  overlayDescription.innerHTML = "I've been playing football since I was a kid. It helps me connect with many great friends and enjoy the game.";
-  overlay.style.justifyContent = "start";
-  overlayDescription.style.textAlign ="start";
-  overlayContent.style.alignItems = "start";
+const arrHobbies = ['football', 'basketball', 'travel', 'coffee', 'podcast']; 
+
+const arrOverlayImg = [
+  './assets/images/Hobbies/football-bu.jpg', 
+  './assets/images/Hobbies/basketball-bu.jpg', 
+  './assets/images/Hobbies/travel-bu.jpg', 
+  './assets/images/Hobbies/coffee-bu.jpg', 
+  './assets/images/Hobbies/podcast.jpg',
+
+]; 
+const arrHobbiesDescript = [
+  'I\'ve been playing football since I was a kid. It helps me connect with many great friends and enjoy the game.',
+  'After football, basketball is also my favorite sport. This sport also gives me the opportunity to connect with so many amazing people.',
+  'I have always loved exploring new lands. Travel takes us out of our comfort zones and inspires us to see, taste and try new things.',
+  'My hobby in my free time is going to quiet cafes in Hanoi that I know. The familiar seat with the signature cup of coffee there always gives me a feeling of peace and comfort.',
+  'Instead of reading books, listening to podcasts helps me absorb knowledge more easily. There\'s a lot of good content on podcast platforms and I feel it makes me feel good.'
+];
+
+const arrayHD = () => {
+  const descriptionHobbies = [];
+  const listOverlayImg = [];
+  for(let i=0; i<5; i++) {
+    console.log(listOverlayImg)
+    descriptionHobbies[arrHobbies[i]] = arrHobbiesDescript[i];
+    listOverlayImg[arrHobbies[i]] = arrOverlayImg[i];
+  }
+
+  return descriptionHobbies;
 }
 
-function chooseHobbies2() {
-  football.style.color = "#9a9a9a";
-  basketball.style.color = "#ffffff";
-  travel.style.color = "#9a9a9a";
-  coffee.style.color = "#9a9a9a";
-  podcast.style.color = "#9a9a9a";
-  overlayImg.src = "./assets/images/Hobbies/basketball-bu.jpg";
-  overlayDescription.innerHTML = "After football, basketball is also my favorite sport. This sport also gives me the opportunity to connect with so many amazing people.";
-  overlay.style.justifyContent = "end";
-  overlayDescription.style.textAlign ="end";
-  overlayContent.style.alignItems = "end";
+// tuan viet
+
+const arrayImg = () => {
+  const listOverlayImg = [];
+  for(let i=0; i<5; i++) {
+    listOverlayImg[arrHobbies[i]] = arrOverlayImg[i];
+  }
+
+  return listOverlayImg;
+}
+// end tuan
+
+function removeElementFromArray(arr, element) {
+  const newArray = [...arr]; // Tạo một bản sao của mảng gốc
+
+  const index = newArray.indexOf(element);
+  if (index !== -1) {
+    newArray.splice(index, 1); // Xóa phần tử khỏi mảng tạm
+  }
+
+  return newArray; // Trả về mảng tạm mới
 }
 
-function chooseHobbies3() {
-  football.style.color = "#9a9a9a";
-  basketball.style.color = "#9a9a9a";
-  travel.style.color = "#ffffff";
-  coffee.style.color = "#9a9a9a";
-  podcast.style.color = "#9a9a9a";
-  overlayImg.src = "./assets/images/Hobbies/travel-bu.jpg";
-  overlayDescription.innerHTML = "I have always loved exploring new lands. Travel takes us out of our comfort zones and inspires us to see, taste and try new things.";
-  overlay.style.justifyContent = "start";
-  overlayDescription.style.textAlign ="start";
-  overlayContent.style.alignItems = "start";
+const changeActive = (targetId) => {
+  if (!targetId.classList.contains('active-hobbies')) {
+    targetId.classList.add('active-hobbies');
+  }
+  const tempArray = removeElementFromArray(arrHobbies, targetId.id);
+  tempArray.map(function (item) {
+    const targetId = document.getElementById(item);
+
+    return targetId.classList.remove('active-hobbies');
+  });
 }
 
-function chooseHobbies4() {
-  football.style.color = "#9a9a9a";
-  basketball.style.color = "#9a9a9a";
-  travel.style.color = "#9a9a9a";
-  coffee.style.color = "#ffffff";
-  podcast.style.color = "#9a9a9a";
-  overlayImg.src = "./assets/images/Hobbies/coffee-bu.jpg";
-  overlayDescription.innerHTML = "My hobby in my free time is going to quiet cafes in Hanoi that I know. The familiar seat with the signature cup of coffee there always gives me a feeling of peace and comfort.";
-  overlay.style.justifyContent = "end";
-  overlayDescription.style.textAlign ="end";
-  overlayContent.style.alignItems = "end";
-}
+document.addEventListener('click', (e) => {
+  let arr = arrayHD();
+  // tuan viet
+  let arrImg = arrayImg();
+  const targetImgId = document.getElementById(e.target.id);
+  let divImg = document.getElementById('overlay-img');
 
-function chooseHobbies5() {
-  football.style.color = "#9a9a9a";
-  basketball.style.color = "#9a9a9a";
-  travel.style.color = "#9a9a9a";
-  coffee.style.color = "#9a9a9a";
-  podcast.style.color = "#ffffff";
-  overlayImg.src = "./assets/images/Hobbies/podcast.jpg";
-  overlayDescription.innerHTML = "Instead of reading books, listening to podcasts helps me absorb knowledge more easily. There's a lot of good content on podcast platforms and I feel it makes me feel good.";
-  overlay.style.justifyContent = "start";
-  overlayDescription.style.textAlign ="start";
-  overlayContent.style.alignItems = "start";
-}
+  console.log('targeteimgid',targetImgId)
+  console.log('imgitem', arrImg[e.target.id])
+  console.log('arrOverlayImg',arrOverlayImg)
+  console.log('e.target.id', e.target.id)
+  console.log('divImg', divImg)
+
+  if (arrOverlayImg.includes(arrImg[e.target.id])) {
+    console.log(1)
+    overlayImg.src = '';
+    overlayImg.src = arrImg[e.target.id];
+  }
+  // end tuan
+  
+  var text = document.createTextNode(arr[e.target.id]);
+  const targetId = document.getElementById(e.target.id);
+
+  if (arrHobbies.includes(e.target.id)) {
+    overlayDescription.innerHTML = '';
+    overlayDescription.appendChild(text);
+    changeActive(targetId); 
+  }
+
+  let position = body.className.search('lightmode');
+
+  // if (parseInt(position) > 0) {
+  //   targetId.style.color = "#000000";
+  //   changeDefaultColor(e.target.id, '#f5b32f');
+  // } else {
+  //   console.log('toi', targetId);
+  //   targetId.style.color = "#ffffff";
+  //   changeDefaultColor(e.target.id, '#9a9a9a');
+  // }
+});
+
+// // tuan
+// let hobbiesBox = getElementById('hobbies-content-id');
+// if(hobbiesBox) {
+//   hobbiesBox
+// }
+
+// chooseHobbies1 = (obj) => {
+  // console.log(obj.attr('class'))
+
+  // var text = document.createTextNode();
+
+  // overlayDescription.appendChild(text);
+
+  // overlayDescription
+// }
+
+
+// function chooseHobbies1() {
+//   football.style.color = "#ffffff";
+//   basketball.style.color = "#9a9a9a";
+//   travel.style.color = "#9a9a9a";
+//   coffee.style.color = "#9a9a9a";
+//   podcast.style.color = "#9a9a9a";
+//   overlayImg.src = "./assets/images/Hobbies/football-bu.jpg";
+//   overlayDescription.innerHTML = "I've been playing football since I was a kid. It helps me connect with many great friends and enjoy the game.";
+//   overlay.style.justifyContent = "start";
+//   overlayDescription.style.textAlign ="start";
+//   overlayContent.style.alignItems = "start";
+// }
+
+// function chooseHobbies2() {
+//   football.style.color = "#9a9a9a";
+//   basketball.style.color = "#ffffff";
+//   travel.style.color = "#9a9a9a";
+//   coffee.style.color = "#9a9a9a";
+//   podcast.style.color = "#9a9a9a";
+//   overlayImg.src = "./assets/images/Hobbies/basketball-bu.jpg";
+//   overlayDescription.innerHTML = "After football, basketball is also my favorite sport. This sport also gives me the opportunity to connect with so many amazing people.";
+//   overlay.style.justifyContent = "end";
+//   overlayDescription.style.textAlign ="end";
+//   overlayContent.style.alignItems = "end";
+// }
+
+// function chooseHobbies3() {
+//   football.style.color = "#9a9a9a";
+//   basketball.style.color = "#9a9a9a";
+//   travel.style.color = "#ffffff";
+//   coffee.style.color = "#9a9a9a";
+//   podcast.style.color = "#9a9a9a";
+//   overlayImg.src = "./assets/images/Hobbies/travel-bu.jpg";
+//   overlayDescription.innerHTML = "I have always loved exploring new lands. Travel takes us out of our comfort zones and inspires us to see, taste and try new things.";
+//   overlay.style.justifyContent = "start";
+//   overlayDescription.style.textAlign ="start";
+//   overlayContent.style.alignItems = "start";
+// }
+
+// function chooseHobbies4() {
+//   football.style.color = "#9a9a9a";
+//   basketball.style.color = "#9a9a9a";
+//   travel.style.color = "#9a9a9a";
+//   coffee.style.color = "#ffffff";
+//   podcast.style.color = "#9a9a9a";
+//   overlayImg.src = "./assets/images/Hobbies/coffee-bu.jpg";
+//   overlayDescription.innerHTML = "My hobby in my free time is going to quiet cafes in Hanoi that I know. The familiar seat with the signature cup of coffee there always gives me a feeling of peace and comfort.";
+//   overlay.style.justifyContent = "end";
+//   overlayDescription.style.textAlign ="end";
+//   overlayContent.style.alignItems = "end";
+// }
+
+// function chooseHobbies5() {
+//   football.style.color = "#9a9a9a";
+//   basketball.style.color = "#9a9a9a";
+//   travel.style.color = "#9a9a9a";
+//   coffee.style.color = "#9a9a9a";
+//   podcast.style.color = "#ffffff";
+//   overlayImg.src = "./assets/images/Hobbies/podcast.jpg";
+//   overlayDescription.innerHTML = "Instead of reading books, listening to podcasts helps me absorb knowledge more easily. There's a lot of good content on podcast platforms and I feel it makes me feel good.";
+//   overlay.style.justifyContent = "start";
+//   overlayDescription.style.textAlign ="start";
+//   overlayContent.style.alignItems = "start";
+// }
 
 let themeSong = document.getElementById("theme-song");
 let playThemeSong = document.getElementById("play-theme-song");
@@ -165,70 +288,107 @@ const statusMode = document.querySelector('#status-mode');
 const modeBtn = document.querySelector('.mode-btn');
 const lightModeDescription = document.querySelector(".toggle__status-mode-container--description");
 
-statusMode.addEventListener('click', () => {
+statusMode.addEventListener('click', (e) => {
   body.classList.toggle('lightmode');
-
-  // lightModeDescription.innerHTML = 'Light <br> mode';
-  
-  // if (body.classList.contains('lightmode')) {
-  //   lightModeDescription.innerHTML('Light <br> mode');
-  //   modeBtn.classList.remove('fa-cloud-moon');
-  //   modeBtn.classList.add('fa-sun');
-  // } else {
-  //   lightModeDescription.innerHTML('Dark <br> mode');
-  //   modeBtn.classList.remove('fa-sun');
-  //   modeBtn.classList.add('fa-cloud-moon');
-  // }
 })
 
-// $.validator.addMethod("email", function(value, element) {
-//   return this.optional(element) || /^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(value);
-// }, 'Địa chỉ email chưa hợp lệ');
+function Appear() {
+  var summaryContent = document.querySelector('.summary-content__bio');
+  var summaryContentPosition = summaryContent.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight / 1.5;
+  if(summaryContentPosition < screenPosition) {
+    summaryContent.classList.add('appear');
+  } 
+}
 
-// $(() => {
-//   $('#form').submit(e => {
-//       let fullName = $('#fullname').val().trim();
-//       let email = $('#email').val().trim();
-//       let message = $('#message').val().trim();
-//       let regex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+function boxAppear() {
+  var educationBox = document.querySelector('.education-box');
+  var educationBoxPosition = educationBox.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight / 3;
+  if(educationBoxPosition < screenPosition) {
+    educationBox.classList.add('eduAppear');
+  }
+}
 
-//       if (fullName.length === 0) {
-//         showError('Vui lòng nhập password');
-//         e.preventDefault();
-//       }
+function work1Appear() {
+  var workBox = document.querySelector('.edu-details-1');
+  var workBoxPosition = workBox.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight / 2;
+  if(workBoxPosition < screenPosition) {
+    workBox.classList.add('work1Appear');
+  }
+}
 
-//       else if (email.length === 0) {
-//           showError('Vui lòng nhập email');
-//           e.preventDefault();
-//       }
+function work2Appear() {
+  var workBox = document.querySelector('.edu-details-2');
+  var workBoxPosition = workBox.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight / 2;
+  if(workBoxPosition < screenPosition) {
+    workBox.classList.add('work2Appear');
+  }
+}
 
-//       else if (!regex.test(email)) {
-//           showError('Email không hợp lệ');
-//           e.preventDefault();
-//       }
+function work3Appear() {
+  var workBox = document.querySelector('.edu-details-3');
+  var workBoxPosition = workBox.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight / 2;
+  if(workBoxPosition < screenPosition) {
+    workBox.classList.add('work3Appear');
+  }
+}
 
-//       else if (regex.test(email) && fullName.length > 0 && email.length > 0) {
-//           console.log(fullName);
-//           console.log(email); 
-//           swal({
-//               title: "Chúc mừng",
-//               text: "Bạn đã đăng nhập thành công!",
-//               icon: "success",
-//               }).then(ok => {
-//                   if(ok) {
-//                       window.location.href = "./list_student.php";
-//                   }
-//               })
-//           e.preventDefault();
-//       }
-//   })
-// })
+function work4Appear() {
+  var workBox = document.querySelector('.edu-details-4');
+  var workBoxPosition = workBox.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight / 2;
+  if(workBoxPosition < screenPosition) {
+    workBox.classList.add('work4Appear');
+  }
+}
 
-// function showError(message) {
-//   $('#errorMessage').html(message);
-//   $('#errorMessage').show();
-// }
+function work5Appear() {
+  var workBox = document.querySelector('.edu-details-5');
+  var workBoxPosition = workBox.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight / 2;
+  if(workBoxPosition < screenPosition) {
+    workBox.classList.add('work5Appear');
+  }
+}
 
+function wid1Appear() {
+  var widBox = document.querySelector('.wid-des-1');
+  var widBoxPosition = widBox.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight / 2;
+  if(widBoxPosition < screenPosition) {
+    widBox.classList.add('wid1Appear');
+  }
+}
 
+function wid2Appear() {
+  var widBox = document.querySelector('.wid-des-2');
+  var widBoxPosition = widBox.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight / 2;
+  if(widBoxPosition < screenPosition) {
+    widBox.classList.add('wid2Appear');
+  }
+}
 
+function wid3Appear() {
+  var widBox = document.querySelector('.wid-des-3');
+  var widBoxPosition = widBox.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight / 2;
+  if(widBoxPosition < screenPosition) {
+    widBox.classList.add('wid3Appear');
+  }
+}
 
+window.addEventListener('scroll', Appear);
+window.addEventListener('scroll', boxAppear);
+window.addEventListener('scroll', work1Appear);
+window.addEventListener('scroll', work2Appear);
+window.addEventListener('scroll', work3Appear);
+window.addEventListener('scroll', work4Appear);
+window.addEventListener('scroll', work5Appear);
+window.addEventListener('scroll', wid1Appear);
+window.addEventListener('scroll', wid2Appear);
+window.addEventListener('scroll', wid3Appear);
