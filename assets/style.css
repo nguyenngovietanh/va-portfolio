@@ -852,7 +852,7 @@ body {
 }
 
 .message-box input, .message-box textarea {
-    background: #9A9A9A;
+    background: #d6d6d6;
 }
 
 .send-btn button {
@@ -930,17 +930,6 @@ body {
     position: absolute;
     top: 4527px;
     left: -155px;
-}
-
-.pattern-5 {
-    content: "";
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background: rgba(50, 49, 49, 0.6);
-    position: absolute;
-    top: 5700px;
-    right: -210px;
 }
 
 /* .pattern-6 {
@@ -1370,6 +1359,10 @@ body {
 
 .lightmode .toggle__status-mode-container--description {
     content: "Light <br> mode";
+}
+
+.lightmode .blog-content-box p, .lightmode .post-date {
+    color: #414141;
 }
 
 .background-blog {

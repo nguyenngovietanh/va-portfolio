@@ -21,7 +21,7 @@
             <div class="header w-full flex items-center	flex-col relative">
                 <div class="navbar fixed w-full flex justify-center h-20" id="navbar">
                     <div class="navbar-items relative flex items-center justify-between w-full px-0">
-                        <div class="logo" id="logo">
+                        <div class="logo" id="logo" onclick="window.scrollTo(0, 0);">
                             <img src="./assets/images/new-logo-V-white.png" alt="" class="relative w-12 h-12 cursor-pointer">
                         </div>
                         <div class="navigation-block">
@@ -375,7 +375,7 @@
                                             <path d="M63.7917 78.7502C59.7917 82.9168 55.2084 87.2085 50.0001 91.6668C27.7917 72.7085 16.6667 56.3335 16.6667 42.5002C16.6667 21.7502 32.5001 8.3335 50.0001 8.3335C67.4584 8.3335 83.2917 21.7085 83.3334 42.3752L92.0417 33.6668L97.9167 39.5835L79.1667 58.3335L60.4167 39.5835L66.2917 33.7085L75.0001 42.3752C74.9584 27.2918 63.9167 16.6668 50.0001 16.6668C36.0417 16.6668 25.0001 27.3752 25.0001 42.5002C25.0001 52.2502 33.1251 65.1668 50.0001 80.5835C52.6667 78.1252 55.1251 75.7502 57.3751 73.4585C56.6419 72.0117 56.2567 70.4138 56.2501 68.7918C56.2501 66.0292 57.3475 63.3796 59.3011 61.4261C61.2546 59.4726 63.9041 58.3752 66.6667 58.3752C69.4294 58.3752 72.0789 59.4726 74.0324 61.4261C75.9859 63.3796 77.0834 66.0292 77.0834 68.7918C77.082 70.4031 76.7055 71.9919 75.984 73.4325C75.2624 74.8732 74.2154 76.1261 72.9259 77.0922C71.6364 78.0584 70.1398 78.7111 68.5544 78.9989C66.9691 79.2866 65.3385 79.2015 63.7917 78.7502Z" fill="white"/>
                                         </svg>
                                     </div>
-                                    <div class="item-name ml-2" id="travel">Travel & camping</div>
+                                    <div class="item-name ml-2" id="travel">Travel</div>
                                 </div>
                                 <div class="hobbies-content__list--item flex items-center font-bold uppercase cursor-pointer mt-3">
                                     <div class="item-icon">
@@ -562,7 +562,6 @@
             <div class="pattern-2"></div>
             <div class="pattern-3"></div>
             <div class="pattern-4"></div>
-            <div class="pattern-5"></div>
             <div class="pattern-6"></div>
             <audio id="theme-song" controls autoplay loop hidden>
                 <source src="./assets/sounds/love-in-my-pocket.mp3" type="audio/mp3">
@@ -582,7 +581,7 @@
         </script>
         <script type="text/javascript">
             function blog() {
-                window.location.href = "./src/pages/blog.html";
+                window.location.href = "./blog.html";
             }
         </script>
     </body>

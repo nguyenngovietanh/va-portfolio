@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="w-full h-full">
+    <head>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=divice-width, intinial-scale=1.0">
+            <title>Viet Anh Portfolio</title>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="./assets/style.css">
+            <link rel="stylesheet" href="./assets/blog.css">
+            <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+            <script src="https://kit.fontawesome.com/e8079f8f5d.js" crossorigin="anonymous"></script>
+            <script src="https://cdn.tailwindcss.com"></script>
+            <script src="https://kit.fontawesome.com/e8079f8f5d.js" crossorigin="anonymous"></script>
+            <script src="./assets/all.min.js"></script>
+        </head>
+    </head>
+    <body class="w-full h-auto scroll-smooth text-base bg-fixed	bg-center cursor-default">
+        <div class="main-container text-left m-auto relative overflow-hidden">
+            <!-- Header -->
+            <div class="header w-full flex items-center	flex-col relative">
+                <div class="navbar fixed w-full flex justify-center h-20" id="navbar">
+                    <div class="navbar-items relative flex items-center justify-between w-full px-0">
+                        <div class="logo" id="logo">
+                            <img src="./assets/images/new-logo-V-white.png" alt="" class="relative w-12 h-12 cursor-pointer">
+                        </div>
+                        <div class="navigation-block">
+                            <div class="navigation relative flex items-center active" id="navigation">
+                                <a href="#" onclick="portfolio()">Portfolio</a>
+                                <a href="#resume" onclick="resume()">Resume</a>
+                                <a href="#">Blog</a>
+                                <a href="#contact" onclick="contact()">Contact</a>
+                            </div>
+                            <div class="toggle" id="toggle">
+                                <button class="toggle-icon relative w-full h-full flex flex-col items-end justify-around cursor-pointer border-none" id="toggle-icon">
+                                    <div class="toggle-line w-3/4 right-0 rounded-xl" id="toggle-line"></div>
+                                </button>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-hide bg-zinc-900 w-full h-20 fixed" id="navbar-hide"></div>
+            </div>
+            <!-- Background video -->
+            <div class="blog-background">
+                <video id="background-video" autoplay loop muted>
+                    <source src="./assets/videos/pexels-minh-khac-nguyen-15319629 (1440p).mp4" type="video/mp4">
+                </video>
+                <div class="blog-background__content absolute">
+                    <h3 class="glassy-text">Welcome to my blog!</h3>
+                    <h4>This is where I will share my lessons as well as my views on everything in life. Let's explore the world with me!</h4>
+                    <button><a href="#blog-container">Let's explore</a></button>
+                </div>
+            </div>
+            <!-- Blog -->
+            <div class="blog-container pt-12 flex justify-center flex-col" id="blog-container">
+                <div class="blog-filter flex items-center justify-between ml-auto mr-auto">
+                    <div class="blog-filter__icon">
+                        <svg stroke="currentColor" fill="#ffffff" stroke-width="0" viewBox="0 0 24 24" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M21,3H5C4.447,3,4,3.447,4,4v2.59c0,0.523,0.213,1.037,0.583,1.407L10,13.414V21c0,0.347,0.18,0.668,0.475,0.851 C10.635,21.95,10.817,22,11,22c0.153,0,0.306-0.035,0.447-0.105l4-2C15.786,19.725,16,19.379,16,19v-5.586l5.417-5.417 C21.787,7.627,22,7.113,22,6.59V4C22,3.447,21.553,3,21,3z M14.293,12.293C14.105,12.48,14,12.734,14,13v5.382l-2,1V13 c0-0.266-0.105-0.52-0.293-0.707L6,6.59V5h14.001l0.002,1.583L14.293,12.293z"></path></svg>
+                    </div>
+                    <div class="blog-filter__topic">
+                        <button class="mr-2"><a href="#">All</a></button>
+                        <button class="mr-2"><a href="#">Life</a></button>
+                        <button class="mr-2"><a href="#">Works</a></button>
+                        <button class="mr-2"><a href="#">UI/UX</a></button>
+                        <button><a href="#">Sports</a></button>
+                    </div>
+                </div>
+                <div class="blog-all-posts my-8 ml-auto mr-auto flex flex-wrap">
+                    <div class="blog-post w-1/3 p-3">
+                        <div class="blog-post-main flex items-end" onclick="openBlog()">
+                            <img src="./assets/images/blog/blog-theme-1.jpeg" alt="" class="blog-post-main-bg">
+                            <div class="blog-post-main_content">
+                                <div class="blog-post__content--title">Lorem ipsum lipsem lorum</div>
+                                <div class="blog-post__content--time flex items-center">
+                                    <div class="blog-time-icon flex items-center">
+                                        <svg stroke="currentColor" fill="#c0c0c0" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z"></path></svg>
+                                    </div>
+                                    <div class="blog-time-details">18/07/2023</div>
+                                </div>
+                                <div class="blog-post-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-post w-1/3 p-3">
+                        <div class="blog-post-main flex items-end">
+                            <img src="./assets/images/blog/blog-theme-2.jpeg" alt="" class="blog-post-main-bg">
+                            <div class="blog-post-main_content">
+                                <div class="blog-post__content--title">Lorem ipsum lipsem lorum</div>
+                                <div class="blog-post__content--time flex items-center">
+                                    <div class="blog-time-icon flex items-center">
+                                        <svg stroke="currentColor" fill="#c0c0c0" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z"></path></svg>
+                                    </div>
+                                    <div class="blog-time-details">18/07/2023</div>
+                                </div>
+                                <div class="blog-post-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-post w-1/3 p-3">
+                        <div class="blog-post-main flex items-end">
+                            <img src="./assets/images/blog/blog-theme-3.jpeg" alt="" class="blog-post-main-bg">
+                            <div class="blog-post-main_content">
+                                <div class="blog-post__content--title">Lorem ipsum lipsem lorum</div>
+                                <div class="blog-post__content--time flex items-center">
+                                    <div class="blog-time-icon flex items-center">
+                                        <svg stroke="currentColor" fill="#c0c0c0" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z"></path></svg>
+                                    </div>
+                                    <div class="blog-time-details">18/07/2023</div>
+                                </div>
+                                <div class="blog-post-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-post w-1/3 p-3">
+                        <div class="blog-post-main flex items-end">
+                            <img src="./assets/images/blog/blog-theme-4.jpeg" alt="" class="blog-post-main-bg">
+                            <div class="blog-post-main_content">
+                                <div class="blog-post__content--title">Lorem ipsum lipsem lorum</div>
+                                <div class="blog-post__content--time flex items-center">
+                                    <div class="blog-time-icon flex items-center">
+                                        <svg stroke="currentColor" fill="#c0c0c0" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z"></path></svg>
+                                    </div>
+                                    <div class="blog-time-details">18/07/2023</div>
+                                </div>
+                                <div class="blog-post-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-post w-1/3 p-3">
+                        <div class="blog-post-main flex items-end">
+                            <img src="./assets/images/blog/blog-theme-5.jpeg" alt="" class="blog-post-main-bg">
+                            <div class="blog-post-main_content">
+                                <div class="blog-post__content--title">Lorem ipsum lipsem lorum</div>
+                                <div class="blog-post__content--time flex items-center">
+                                    <div class="blog-time-icon flex items-center">
+                                        <svg stroke="currentColor" fill="#c0c0c0" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z"></path></svg>
+                                    </div>
+                                    <div class="blog-time-details">18/07/2023</div>
+                                </div>
+                                <div class="blog-post-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-post w-1/3 p-3">
+                        <div class="blog-post-main flex items-end">
+                            <img src="./assets/images/blog/blog-theme-6.jpeg" alt="" class="blog-post-main-bg">
+                            <div class="blog-post-main_content">
+                                <div class="blog-post__content--title">Lorem ipsum lipsem lorum</div>
+                                <div class="blog-post__content--time flex items-center">
+                                    <div class="blog-time-icon flex items-center">
+                                        <svg stroke="currentColor" fill="#c0c0c0" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z"></path></svg>
+                                    </div>
+                                    <div class="blog-time-details">18/07/2023</div>
+                                </div>
+                                <div class="blog-post-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Assistive-touch -->
+            <div class="assistive-touch fixed flex flex-col items-center justify-center rounded-lg">
+                <div class="assistive-touch-item">
+                    <div class="play-toggle" id="play-theme-song">
+                        <div class="wave-line" id="wave-line-1"></div>
+                        <div class="wave-line" id="wave-line-2"></div>
+                        <div class="wave-line" id="wave-line-3"></div>
+                        <div class="wave-line" id="wave-line-4"></div>
+                        <div class="wave-line" id="wave-line-5"></div>
+                        <div class="wave-line" id="wave-line-6"></div>
+                        <div class="wave-line" id="wave-line-7"></div>
+                        <div class="wave-line" id="wave-line-8"></div>
+                    </div>
+                    <div class="toggle__status-mode flex items-center" id="status-mode">
+                        <div class="toggle__status-mode-container flex items-center">
+                            <div class="toggle__status-mode-container--icon flex justify-center items-center">
+                                <i class="mode-btn fa-solid fa-cloud-moon"></i>
+                                <i class="mode-btn fa-solid fa-sun"></i>
+                            </div>
+                        </div>
+                        <div class="toggle__status-mode-container--description">
+                            <div class="dark-text" style="display: block;">
+                                <p>Dark <br> mode</p>
+                            </div>
+                            <div class="light-text" style="display: none;">
+                                <p>Light <br> mode</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <!-- Footer -->
+            <footer class="relative z-50 bottom-0 left-0 mt-30">
+                <div class="footer w-full h-20 bg-zinc-900 text-white text-md flex justify-center items-center font-normal">
+                    <p>© 2023 Copyright <span class="font-bold">Viet Anh Nguyen</span>. All Rights Reserved.</p>
+                </div>
+            </footer>
+            <audio id="theme-song" controls autoplay loop hidden>
+                <source src="./assets/sounds/love-in-my-pocket.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <script src="./assets/main.js"></script>
+        <script type="text/javascript">
+            function portfolio() {
+                window.location.href = "./index.html#portfolio";
+            }
+            function resume() {
+                window.location.href = "./index.html#resume";
+            }
+            function contact() {
+                window.location.href = "./index.html#contact";
+            }
+            function openBlog() {
+                window.location.href = "./blog/blog-post.html"
+            }
+        </script>
+    </body>
+    <script src="./assets/main.js"></script>
+</html>
