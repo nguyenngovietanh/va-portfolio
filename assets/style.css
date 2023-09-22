@@ -672,6 +672,11 @@ body {
     margin-top: 150px;
 }
 
+.wid-box {
+    position: relative;
+    z-index: 100;
+}
+
 .wid-content__item {
     width: 33.33%;
 }
@@ -1193,7 +1198,7 @@ body {
 }
 
 .lightmode .resume-container {
-    background: #f3eed9;
+    background: #f9f9f9;
     margin-top: -132px;
     padding-top: 0;
     padding-bottom: 30px;
@@ -1205,7 +1210,7 @@ body {
 }
 
 .lightmode .navbar-hide {
-    background: #f3eed9 !important;
+    background: #f9f9f9 !important;
 }
 
 .lightmode .toggle-icon {
@@ -1234,7 +1239,7 @@ body {
 }
 
 .lightmode .footer {
-    background: #f3eed9 !important;
+    background: #f9f9f9 !important;
 }
 
 .lightmode .footer p {
@@ -1251,11 +1256,11 @@ body {
 }
 
 .lightmode .message-box {
-    background: linear-gradient(114deg, rgba(40,49,82,1) 0%, rgba(55,78,113,1) 46%, rgba(93,116,143,1) 100%);
+    background: linear-gradient(114deg, rgba(40,49,82,1) 0%, rgba(55,78,113,1) 46%, rgb(26, 64, 109) 100%);
 }
 
 .lightmode .contact-content__item {
-    background: linear-gradient(114deg, rgba(40,49,82,1) 0%, rgba(55,78,113,1) 46%, rgba(93,116,143,1) 100%);
+    background: linear-gradient(114deg, rgba(40,49,82,1) 0%, rgba(55,78,113,1) 46%, rgb(26, 64, 109) 100%);
 }
 
 .lightmode .message-box input, .lightmode .message-box textarea {
@@ -1327,15 +1332,15 @@ body {
 .lightmode .hobbies-content__list--item:nth-child(1) .item-icon svg,
 .lightmode .hobbies-content__list--item:nth-child(2) .item-icon svg,
 .lightmode .hobbies-content__list--item:nth-child(5) .item-icon svg {
-    fill: #141414;
+    fill: #283152;
 } 
 
 .lightmode .hobbies-content__list--item:nth-child(3) path {
-    fill: #141414;
+    fill: #283152;
 }
 
 .lightmode .hobbies-content__list--item:nth-child(4) path {
-    stroke: #141414;
+    stroke: #283152;
 }
 
 .lightmode .wid-content__item--description {
@@ -1405,4 +1410,210 @@ body {
 
 .back-to-homepage:hover {
     color: #00000000;
+}
+
+@media only screen and (max-width: 1280px) {
+    .navbar-items, .header-content, .header-info, 
+    .resume-content, .contact-content, .message-box {
+        max-width: 900px;
+    }
+
+    .header-content {
+        padding-top: 7rem !important;
+    }
+
+    .typing-effect h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .job-title h3 {
+        font-size: 28px !important;
+    }
+
+    .introduce {
+        font-size: 18px !important;
+        line-height: 24px !important;
+    }
+
+    .header-info {
+        margin-top: 32px !important;
+    }
+
+    .follow-box h3, .social-box h3 {
+        font-size: 18px;
+    }
+
+    .social-link, .my-skills {
+        margin-top: 10px;
+    }
+
+    .fa-linkedin, .fa-github, .fa-square-behance, .fa-figma, .fa-html5, .fa-css3-alt, .fa-square-js, .fa-react {
+        width: 32px;
+        height: 32px;
+    }
+
+    .assistive-touch {
+        right: 40px;
+        width: 90px;
+    }
+
+    .play-toggle, .toggle__status-mode {
+        width: 74px;
+        height: 36px;
+        right: -2.5px;
+    }
+
+    .toggle__status-mode {
+        margin-top: 8px;
+    }
+
+    .toggle__status-mode-container {
+        width: 28px;
+        height: 28px;
+    }
+
+    .lightmode .toggle__status-mode-container {
+        transform: translateX(38px);
+    }
+
+    .toggle__status-mode-container--description {
+        font-size: 9px;
+    }
+
+    .slider__item--img {
+        width: 200px !important;
+        height: 310px !important;
+    }
+
+    .port-carousel::after {
+        margin-top: -75px !important;
+    }
+
+    .slick-arrow {
+        width: 40px;
+    }
+
+    .slick-prev {
+        margin-top: -30px;
+    }
+
+    .slick-next {
+        margin-top: -375px;
+    }
+
+    .resume-container {
+        padding-top: 3rem !important;
+    }
+
+    .summary-content__bio--divier {
+        padding: 0 40px;
+    }
+
+    .list-disc li, .summary-content__bio--intro p {
+        font-size: 1.125rem !important;
+        line-height: 1.5rem !important;
+    }
+
+    .divier {
+        height: 136px;
+    }
+
+    .education-content__box--time, .education-content__box--details {
+        width: 40%;
+    }
+
+    .education-content__box--logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .job-company, .education-content__box--time p {
+        font-size: 20px;
+    }
+
+    .job-position {
+        font-size: 18px !important;
+    }
+
+    .job-description {
+        line-height: 1.4rem !important;
+    }
+
+    .education-content-divier {
+        height: 1180px;
+    }
+
+    .wid-content__item--title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .wid-content__item--description {
+        width: 90%;
+        font-size: 16px !important;
+        line-height: 20px !important;
+        padding-top: 0 !important;
+    }
+
+    .item-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .item-logo svg, .item-icon svg {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .hobbies-content__gallery {
+        width: 710px;
+        height: 410px;
+    }
+
+    .contact-container {
+        margin-top: -1px;
+    }
+
+    .wave-line {
+        left: 14px;
+    }
+
+    .overlay-content {
+        width: 90% !important;
+    }
+
+    .overlay-content p {
+        font-size: 26px !important;
+        line-height: 30px !important;
+    }
+
+    .contact-content__item--icon svg {
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    .hobbies-divier {
+        margin-top: 1rem !important;
+    }
+
+    .education-content__details--name, .education-content__details--major {
+        font-size: 20px !important;
+    }
+
+    body {
+        animation: none;
+    }
+
+    .port-title h3, .resume-title h3, .contact-title h3 {
+        font-size: 32px !important;
+    }
+
+    .footer {
+        height: 4rem !important;
+    }
+
+    .footer p {
+        font-size: 14px !important;
+    }
 }

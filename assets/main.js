@@ -47,10 +47,10 @@ const arrOverlayImg = [
 
 ]; 
 const arrHobbiesDescript = [
-  'I\'ve been playing football since I was a kid. It helps me connect with many great friends and enjoy the game.',
+  'I\'ve been playing football since I was a kid. It helps me to connect with many great friends and enjoy the game.',
   'After football, basketball is also my favorite sport. This sport also gives me the opportunity to connect with so many amazing people.',
-  'I have always loved exploring new lands. Travel takes us out of our comfort zones and inspires us to see, taste and try new things.',
-  'My hobby in my free time is going to quiet cafes in Hanoi that I know. The familiar seat with the signature cup of coffee there always gives me a feeling of peace and comfort.',
+  'I have always loved exploring new lands. Travelling takes us out of our comfort zones and inspires us to see, taste and try new things.',
+  'My hobby in my free time is going to quiet cafes that I know in Hanoi. The familiar seat with the signature cup of coffee there always gives me a feeling of peace and comfort.',
   'Instead of reading books, listening to podcasts helps me absorb knowledge more easily. There\'s a lot of good content on podcast platforms and I feel it makes me feel good.'
 ];
 
